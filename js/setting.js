@@ -54,12 +54,7 @@ colorsArr.forEach((ele) => {
 
 //changing background-img
 
-let imgArr = [
-  "url(..imgs/01.jpg)",
-  "url(..imgs/02.jpg)",
-  "url(..imgs/03.jpg)",
-  "url(..imgs/04.jpg)",
-];
+let imgArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
 
 //get from local
 if (window.localStorage.getItem("backgroundImg") != null) {
@@ -90,7 +85,6 @@ function backgroundImageIntervel() {
 
   playAndStop(changingImg);
 }
-
 function allowRandomBackground() {
   //
 
@@ -98,7 +92,8 @@ function allowRandomBackground() {
 
   //
 
-  landingPage.style.backgroundImage = imgArr[randomnum];
+  landingPage.style.backgroundImage =
+    'url("../imgs/' + imgArr[randomnum] + '")';
 
   //
 
