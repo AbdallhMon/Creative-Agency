@@ -1339,6 +1339,7 @@ h2 {
   position: relative;
   background-image: url("../imgs/contact-us-2.jpg");
   background-size: cover;
+  height : 100vh
 }
 .contact-us .overlay {
   position: relative;
