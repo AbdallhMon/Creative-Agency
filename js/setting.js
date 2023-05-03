@@ -7,11 +7,9 @@ let set = document.querySelector(".setting");
 
 let setButton = document.querySelector(".setting i");
 
-let landingPage = document.querySelector(".landing-page");
-
 let randomBackgroundImgSetting = document.querySelector(".random-background");
 
-let randomBackgroundSpan = document.querySelectorAll(".random-background span");
+let randomBackEl = document.querySelectorAll(".random-background span");
 
 let showBulletsSpan = document.querySelectorAll(".show-bullets span");
 
@@ -53,81 +51,76 @@ colorsArr.forEach((ele) => {
 });
 
 //changing background-img
+// Random Background Option
+let backgroundOption = true;
 
-let imgArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
+// Variable To Control The Background Interval
+let backgroundInterval;
 
-//get from local
-if (window.localStorage.getItem("backgroundImg") != null) {
-  randomBackgroundSpan.forEach((e) => {
-    e.classList.remove("active");
+// Check If There's Local Storage Random Background Item
+let backgroundLocalItem = localStorage.getItem("background_option");
 
-    let currentActive = document.querySelector(
-      `.setting .random-background .${window.localStorage.getItem(
-        "backgroundImg"
-      )}`
-    );
-    currentActive.classList.add("active");
+// Check If Random Background Local Storage Is Not EMpty
+if (backgroundLocalItem !== null) {
+  // Remove Active Class From All Spans
+  document.querySelectorAll(".random-backgrounds span").forEach((element) => {
+    element.classList.remove("active");
   });
+
+  if (backgroundLocalItem === "true") {
+    backgroundOption = true;
+
+    document.querySelector(".random-backgrounds .yes").classList.add("active");
+  } else {
+    backgroundOption = false;
+
+    document.querySelector(".random-backgrounds .no").classList.add("active");
+  }
 }
+// Loop On All Spans
+randomBackEl.forEach((span) => {
+  // Click On Every Span
+  span.addEventListener("click", (e) => {
+    handleActive(e);
 
-if (randomBackgroundSpan[0].classList.contains("active")) {
-  backgroundImageIntervel();
-}
+    if (e.target.dataset.background === "yes") {
+      backgroundOption = true;
 
-function backgroundImageIntervel() {
-  let changingImg = window.setInterval(() => {
-    //
+      randomizeImgs();
 
-    allowRandomBackground();
+      localStorage.setItem("background_option", true);
+    } else {
+      backgroundOption = false;
 
-    //
-  }, 5000);
+      clearInterval(backgroundInterval);
 
-  playAndStop(changingImg);
-}
-function allowRandomBackground() {
-  //
-
-  let randomnum = Math.floor(Math.random() * imgArr.length);
-
-  //
-
-  landingPage.style.backgroundImage =
-    'url("../imgs/' + imgArr[randomnum] + '")';
-
-  //
-
-  //
-}
-playAndStop();
-//stoping background intervel
-
-function playAndStop(changingImg) {
-  randomBackgroundSpan.forEach((ele) => {
-    //
-
-    ele.addEventListener("click", function (e) {
-      randomBackgroundSpan.forEach((r) => {
-        r.classList.remove("active");
-      });
-
-      if (e.target.classList.contains("yes")) {
-        e.target.classList.add("active");
-        backgroundImageIntervel();
-      } else {
-        e.target.classList.add("active");
-        window.clearInterval(changingImg);
-      }
-      let playRandom = document.querySelector(
-        ".setting .random-background .active"
-      );
-
-      window.localStorage.setItem("backgroundImg", playRandom.classList[0]);
-    });
-
-    //
+      localStorage.setItem("background_option", false);
+    }
   });
+});
+
+// Select Landing Page Element
+let landingPage = document.querySelector(".landing-page");
+
+// Get Array Of Imgs
+let imgsArray = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
+
+// Function To Randomize Imgs
+function randomizeImgs() {
+  if (backgroundOption === true) {
+    backgroundInterval = setInterval(() => {
+      // Get Random Number
+      let randomNumber = Math.floor(Math.random() * imgsArray.length);
+
+      // Change Background Image Url
+      landingPage.style.backgroundImage =
+        'url("imgs/' + imgsArray[randomNumber] + '")';
+    }, 6000);
+  }
 }
+
+randomizeImgs();
+
 //show Bullets and hied them
 
 // getFromLocal
