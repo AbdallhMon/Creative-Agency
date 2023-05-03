@@ -55,10 +55,10 @@ colorsArr.forEach((ele) => {
 //changing background-img
 
 let imgArr = [
-  "url(../imgs/01.jpg)",
-  "url(../imgs/02.jpg)",
-  "url(../imgs/03.jpg)",
-  "url(../imgs/04.jpg)",
+  "url(..imgs/01.jpg)",
+  "url(..imgs/02.jpg)",
+  "url(..imgs/03.jpg)",
+  "url(..imgs/04.jpg)",
 ];
 
 //get from local
