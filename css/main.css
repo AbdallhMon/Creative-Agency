@@ -875,6 +875,7 @@ h2 {
 }
 .pop-up img {
   width: 100%;
+      transform: translateX(0%);
 }
 .pop-up span {
   font-size: 18px;
