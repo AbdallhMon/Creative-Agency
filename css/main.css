@@ -24,7 +24,7 @@ body {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 950px;
   }
 }
 @media (min-width: 1200px) {
@@ -875,6 +875,7 @@ h2 {
 }
 .pop-up img {
   width: 100%;
+      transform: translateX(0%) !important;
 }
 .pop-up span {
   font-size: 18px;
