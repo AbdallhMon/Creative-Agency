@@ -848,6 +848,7 @@ h2 {
   margin: 5px;
   cursor: pointer;
   height: auto;
+   max-height: 50vh;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
