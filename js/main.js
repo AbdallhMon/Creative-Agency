@@ -18,7 +18,7 @@ function scrollToSection(lis) {
       let selectedSection = document.querySelector(
         `.${e.target.dataset.section}`
       );
-      console.log(selectedSection.offsetTop);
+      
       window.scrollTo({
         top: selectedSection.offsetTop,
 
@@ -39,17 +39,11 @@ window.addEventListener("scroll", function () {
   if (window.scrollY >= about.clientHeight - 100) {
     aboutText.classList.add("shown");
     aboutImg.classList.add("shown");
-  } else {
-    aboutText.classList.remove("shown");
-    aboutImg.classList.remove("shown");
-  }
+  } 
   if (window.scrollY >= about.clientHeight - 200) {
     aboutText.classList.add("shownmob");
     aboutImg.classList.add("shownmob");
-  } else if (window.scrollY < about.clientHeight - 400) {
-    aboutText.classList.remove("shownmob");
-    aboutImg.classList.remove("shownmob");
-  }
+  } 
 });
 //end of about animation
 // start ourskills
