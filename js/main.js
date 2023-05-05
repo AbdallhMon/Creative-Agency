@@ -161,15 +161,7 @@ window.addEventListener("scroll", function () {
       div.classList.add("reached");
       div.classList.add("active");
     });
-  } else if (this.scrollY < timeline.offsetTop - 400) {
-    timelineSpansArr.forEach((span) => {
-      span.classList.remove("active");
-    });
-    timelineDivsArr.forEach((div) => {
-      div.classList.remove("reached");
-      div.classList.remove("active");
-    });
-  }
+  } 
 });
 // feature
 
@@ -183,11 +175,7 @@ window.addEventListener("scroll", function () {
     featureDivsArr.forEach((div) => {
       div.classList.add("active");
     });
-  } else if (this.scrollY < feature.offsetTop - 700) {
-    featureDivsArr.forEach((div) => {
-      div.classList.remove("active");
-    });
-  }
+  } 
 });
 // ts
 let ts = document.querySelector(".testimonials");
@@ -201,12 +189,7 @@ window.addEventListener("scroll", function () {
       div.classList.add("translate-z");
       document.querySelector(".testimonials h2").classList.add("opacity");
     });
-  } else if (this.scrollY < ts.offsetTop - 700) {
-    tsDivsArr.forEach((div) => {
-      div.classList.remove("translate-z");
-      document.querySelector(".testimonials h2").classList.remove("opacity");
-    });
-  }
+  } 
 });
 
 // scroll to top button
