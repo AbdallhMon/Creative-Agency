@@ -823,6 +823,7 @@ h2 {
   border: 2px solid #ccc;
   cursor: pointer;
   height: 480px;
+  height: auto;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
