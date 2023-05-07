@@ -74,43 +74,6 @@ let galleryImgs = document.querySelectorAll(".gallery img");
 
 let galleryImgsArr = Array.from(galleryImgs);
 
-let leftArrow = document.querySelector(".gallery .fa-arrow-left");
-
-let rightArrow = document.querySelector(".gallery .fa-arrow-right");
-
-let amount = 0;
-slide();
-
-rightArrow.addEventListener("click", function () {
-  amount = amount + 100;
-  galleryImgsArr.forEach((ele) => {
-    ele.style.cssText = `transform: translateX(-${amount}%)`;
-  });
-  slide();
-});
-
-leftArrow.addEventListener("click", function () {
-  amount = amount - 100;
-  galleryImgsArr.forEach((ele) => {
-    ele.style.cssText = `transform: translateX(-${amount}%)`;
-  });
-  slide();
-});
-
-function slide() {
-  if (amount == 0) {
-    leftArrow.classList.add("active");
-    return false;
-  } else {
-    leftArrow.classList.remove("active");
-  }
-  if (amount == (galleryImgsArr.length - 1) * 100) {
-    rightArrow.classList.add("active");
-  } else {
-    rightArrow.classList.remove("active");
-  }
-}
-
 // start of our imgs
 
 galleryImgsArr.forEach((img) => {

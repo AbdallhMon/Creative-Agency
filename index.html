@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/Normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
@@ -157,18 +159,104 @@
     </section>
     <section class="gallery">
       <div class="container">
-        <i class="fa-solid fa-arrow-left active"></i>
-        <i class="fa-solid fa-arrow-right"></i>
         <h2>Our Gallery</h2>
-        <div class="gallery-content">
-          <img src="imgs/1.jpg" alt="Image one" />
-          <img src="imgs/2.jpg" alt="Image two" />
-          <img src="imgs/3.jpg" alt="Image three" />
-          <img src="imgs/4.jpg" alt="Image four" />
-          <img src="imgs/5.jpg" alt="Image five" />
-          <img src="imgs/6.jpg" alt="Image six" />
-          <img src="imgs/7.jpg" alt="Image seven" />
-          <img src="imgs/8.jpg" alt="Image eight" />
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="6"
+              aria-label="Slide 7"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="7"
+              aria-label="Slide 8"
+            ></button>
+          </div>
+          <div class="carousel-inner gallery-content">
+            <div class="carousel-item active">
+              <img src="imgs/1.jpg" class="d-block" alt="Image One" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/2.jpg" class="d-block" alt="Image Two" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/3.jpg" class="d-block" alt="Image Three" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/4.jpg" class="d-block" alt="Image Four" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/5.jpg" class="d-block" alt="Image Five" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/6.jpg" class="d-block" alt="Image Six" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/7.jpg" class="d-block" alt="Image Seven" />
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/8.jpg" class="d-block" alt="Image Eight" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
@@ -347,6 +435,8 @@
       </div>
     </section>
     <footer><div class="container">Made With Love By AbdallaMon</div></footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/setting.js"></script>
