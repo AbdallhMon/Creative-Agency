@@ -5,7 +5,7 @@ let colorsArr = Array.from(colors);
 
 let set = document.querySelector(".setting");
 
-let setButton = document.querySelector(".setting .setting-btn");
+let setButton = document.querySelector(".setting i");
 
 let landingPage = document.querySelector(".landing-page");
 
