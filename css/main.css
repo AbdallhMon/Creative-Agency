@@ -435,7 +435,7 @@ body {
 .sub-setting span.active {
   opacity: 1;
 }
-.setting .setting-btn {
+.setting i {
   position: absolute;
   right: -28px;
   top: 25%;
@@ -448,7 +448,7 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-.setting .setting-btn.clicked {
+.setting i.clicked::before {
   animation: clicked infinite 2s linear;
   -webkit-animation: clicked infinite 2s linear;
   display: block;
