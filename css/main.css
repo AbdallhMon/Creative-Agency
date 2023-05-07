@@ -435,7 +435,7 @@ body {
 .sub-setting span.active {
   opacity: 1;
 }
-.setting i {
+.setting svg {
   position: absolute;
   right: -28px;
   top: 25%;
@@ -448,7 +448,7 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-.setting i.clicked::before {
+.setting svg.clicked::before {
   animation: clicked infinite 2s linear;
   -webkit-animation: clicked infinite 2s linear;
   display: block;
