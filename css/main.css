@@ -448,7 +448,7 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-.setting .setting-btn.clicked::before {
+.setting .setting-btn.clicked {
   animation: clicked infinite 2s linear;
   -webkit-animation: clicked infinite 2s linear;
   display: block;
