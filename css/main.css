@@ -337,7 +337,7 @@ body {
 .bullets li p {
   position: absolute;
   left: -108px;
-  top: -6px;
+  top: -9px;
   margin: 0;
   background-color: var(--main-color);
   color: white;
@@ -351,7 +351,7 @@ body {
   content: "";
   position: absolute;
   right: -16px;
-  top: 0px;
+  top: 3px;
   width: 15px;
   height: 25px;
   background-color: var(--main-color);
