@@ -1,4 +1,4 @@
-//scroll to a section
+//scroll to a section bullets
 
 let navLi = document.querySelectorAll(".landing-page nav ul a");
 
@@ -6,7 +6,7 @@ let navLiArr = Array.from(navLi);
 
 scrollToSection(navLiArr);
 
-let bulletLi = document.querySelectorAll(".bullets li a");
+let bulletLi = document.querySelectorAll(".bullets li");
 
 let bulletLiArr = Array.from(bulletLi);
 
